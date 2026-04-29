@@ -1,0 +1,30 @@
+---
+description: ARD UI — tokens, styleguide primitives, and glass dashboard patterns for consistent generation
+alwaysApply: true
+---
+
+# ARD design system
+
+When adding or changing UI in this repo, follow the established **industrial glass dashboard** look: cool grey canvas, frosted white overlays, hairline borders, and restrained typography (Inter).
+
+## Sources of truth
+
+1. **`src/design/tokens.css`** — Tailwind v4 `@theme` tokens (`text-fg-primary`, `bg-surface-app`, `accent-blue`, `shadow-glass`, etc.). Prefer these utilities over raw hex in JSX class names.
+2. **`src/design/tokens.ts`** — Same values for **SVG**, **canvas**, `style={{}}`, or runtime logic. Import `tokens` instead of duplicating hex.
+3. **`src/styleguide.tsx`** — Primitives and presets: `appTheme`, `ui` (glass + typography presets), `cx`, `Button`, `Badge`, `Panel`, `FieldLabel`, `GlassPane`, `systemStyles`, `severityStyles`.
+
+## Rules for new UI
+
+- **Components**: Use `Button`, `Badge`, `Panel`, `FieldLabel`, `GlassPane` from `styleguide.tsx` before inventing new button or chip styles.
+- **Surfaces**: Default shell/canvas uses `surface-*` tokens. Floating analytics tiles use **glass**: `bg-white/40`–`bg-white/50`, `backdrop-blur-2xl` or `backdrop-blur-3xl`, `border-[0.5px] border-white/60`, optional `shadow-glass` / `shadow-floating`. Inner dividers: `border-black/5`.
+- **Typography**: Primary titles `text-fg-primary`, metadata and axis labels `text-fg-muted`, uppercase micro-labels `text-[11px] font-medium uppercase tracking-wider text-fg-label` (or `ui.text.labelUpper`). Prefer `ui.text.*` for repeated combinations.
+- **Radii**: Glass tiles and grid cells use **near-square** corners (`rounded-sm` / 2px). Controls and dark panels use **rounded-xl** or `rounded-panel` (16px) as in `appTheme`.
+- **Accents**: Data emphasis and interactive highlights use **`accent-blue`** (`#465ff1`). Alerts and urgency use **`accent-coral`** (`#ff5744`) or **`accent-danger`** (`#e74c3c`) per context. Success / warning / amber align with `accent-success`, `accent-warning`, `accent-amber`.
+- **Focus**: Reuse `appTheme.focus` on interactive elements; do not introduce ad-hoc focus rings that clash with `ring-fg-default/15`.
+- **Domain pipe colors**: For system-type labels, use `systemStyles` from `styleguide.tsx` so Cold/Hot/Waste/Steam/Gas stay consistent.
+
+## Anti-patterns
+
+- Do not scatter new hex colors in feature files; extend `tokens.css` and `tokens.ts` together if a new semantic color is required.
+- Do not replace the glass aesthetic with flat Material-style cards unless explicitly requested.
+- Do not use heavy purple gradients or generic “AI slop” palettes; stay within the neutral + blue/coral semantic set above.

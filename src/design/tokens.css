@@ -1,0 +1,54 @@
+/**
+ * Design tokens — single source for Tailwind utilities and CSS variables.
+ * Tailwind v4 maps --color-* → bg-*, text-*, border-*; --shadow-* → shadow-*.
+ */
+@theme {
+  /* Foreground */
+  --color-fg-default: #f7fbff;
+  --color-fg-primary: #eef6ff;
+  --color-fg-secondary: #b2bfcc;
+  --color-fg-muted: #788898;
+  --color-fg-label: #7f8b98;
+  --color-fg-ghost: #94a3b8;
+
+  /* Surfaces */
+  --color-surface-page: #0a0f15;
+  --color-surface-shell: #070b10;
+  --color-surface-app: #0b1118;
+  --color-surface-app-deep: #080c12;
+  --color-surface-viewer: #0b0f15;
+  --color-surface-elevated: #101820;
+  --color-surface-inverse: #05080d;
+  --color-surface-inverse-muted: #151d27;
+  --color-surface-chart-tint: #111d2b;
+
+  /* Borders & inputs */
+  --color-border-default: rgb(255 255 255 / 0.1);
+  --color-border-muted: rgb(255 255 255 / 0.06);
+  --color-border-hairline: rgb(255 255 255 / 0.08);
+
+  /* Accents (data viz + CTAs — matches current dashboard) */
+  --color-accent-blue: #465ff1;
+  --color-accent-danger: #e74c3c;
+  --color-accent-coral: #ff5744;
+  --color-accent-success: #27ae60;
+  --color-accent-warning: #f39c12;
+  --color-accent-amber: #f1c40f;
+
+  /* Charts & diagram neutrals */
+  --color-chart-bar: #2dd4bf;
+  --color-chart-line: #6ee7ff;
+  --color-chart-grid: rgb(255 255 255 / 0.08);
+
+  /* Shadows */
+  --shadow-glass: 0 18px 48px rgb(0 0 0 / 0.28);
+  --shadow-glass-lg: 0 28px 80px rgb(0 0 0 / 0.38);
+  --shadow-floating: 0 24px 80px rgb(0 0 0 / 0.42);
+  --shadow-floating-inverse: 0 20px 60px rgb(0 0 0 / 0.45);
+  --shadow-button-primary: 0 12px 30px rgb(70 95 241 / 0.28);
+  --shadow-danger: 0 12px 30px rgb(231 76 60 / 0.28);
+
+  /* Radii (glass tiles use near-square corners) */
+  --radius-sm: 2px;
+  --radius-panel: 16px;
+}
