@@ -1,5 +1,5 @@
 import React from 'react'
-import { AlertTriangle, Building2, CheckCircle2, ChevronRight, Clock3, Layers3, MapPinned, Search, Sparkles } from 'lucide-react'
+import { AlertTriangle, Building2, ChevronRight, Clock3, Layers3, MapPinned, Search, Sparkles } from 'lucide-react'
 import { useAppStore } from '../../store'
 import { Badge, cx, ui } from '../../styleguide'
 import type { ViewName } from '../../types'
@@ -11,7 +11,6 @@ const NAV_ITEMS: Array<{ id: ViewName; label: string; icon: React.ReactNode }> =
   { id: 'report', label: 'Report Issue', icon: <AlertTriangle size={18} /> },
   { id: 'history', label: 'Maintenance', icon: <Clock3 size={18} /> },
   { id: 'presentation', label: 'Presentation Mode', icon: <ChevronRight size={18} /> },
-  { id: 'feedback', label: 'Provide Feedback', icon: <CheckCircle2 size={18} /> },
 ]
 
 export function Sidebar() {

@@ -10,7 +10,6 @@ import { ExplorerScreen } from './screens/ExplorerScreen'
 import { ReportScreen } from './screens/ReportScreen'
 import { HistoryScreen } from './screens/HistoryScreen'
 import { PresentationScreen } from './screens/PresentationScreen'
-import { FeedbackScreen } from './screens/FeedbackScreen'
 
 function ScreenRouter() {
   const { view } = useAppStore()
@@ -23,7 +22,6 @@ function ScreenRouter() {
     case 'report': return <ReportScreen />
     case 'history': return <HistoryScreen />
     case 'presentation': return <PresentationScreen />
-    case 'feedback': return <FeedbackScreen />
     default: return <DashboardScreen />
   }
 }

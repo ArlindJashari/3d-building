@@ -10,7 +10,6 @@ const VIEW_TITLES: Record<string, string> = {
   report: 'Report an Issue',
   history: 'Maintenance History',
   presentation: 'Presentation Mode',
-  feedback: 'Demo Feedback',
 }
 
 export function Header() {

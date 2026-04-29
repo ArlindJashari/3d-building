@@ -12,7 +12,6 @@ export type ViewName =
   | 'report'
   | 'history'
   | 'presentation'
-  | 'feedback'
 
 export interface Point {
   x: number
@@ -111,21 +110,6 @@ export interface MaintenanceRecord {
   status: 'Completed' | 'Scheduled' | 'Needs follow-up'
   severity: Severity
   notes: string
-}
-
-export interface FeedbackSubmission {
-  id: string
-  name: string
-  role: string
-  buildingType: string
-  frequency: string
-  helpful: string
-  valuableFeature: string
-  missing: string
-  wouldPay: string
-  monthlyValue: string
-  notes: string
-  createdAt: string
 }
 
 export type LayerKey = 'cold' | 'hot' | 'waste' | 'heating' | 'gas' | 'valves' | 'issues'
